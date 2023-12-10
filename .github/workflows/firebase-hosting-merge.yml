@@ -10,7 +10,6 @@ jobs:
   build_and_deploy:
     runs-on: ubuntu-latest
     steps:
-      - uses: Install Angular CLI
       - run: npm install -g @angular/cli@17.0.5
 
       - uses: actions/checkout@v3

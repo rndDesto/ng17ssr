@@ -10,11 +10,11 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
-      - name: set-up node
+      - name: Install Angular CLI Global
         uses: actions/setup-node@v3
         with:
           node-version: '20.9.0'
-      - name: Install dependencies
+      - name: Install Angular CLI Global
         run: |
           npm install -g @angular/cli@17.0.5
       

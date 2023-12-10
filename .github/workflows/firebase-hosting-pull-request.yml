@@ -8,8 +8,12 @@ jobs:
     if: '${{ github.event.pull_request.head.repo.full_name == github.repository }}'
     runs-on: ubuntu-latest
     steps:
+      - uses: Install Angular CLI
+      - run: npm i -g @angular/cli
+
       - uses: actions/checkout@v3
       - run: npm ci && npm run build
+      
       - uses: FirebaseExtended/action-hosting-deploy@v0
         with:
           repoToken: '${{ secrets.GITHUB_TOKEN }}'

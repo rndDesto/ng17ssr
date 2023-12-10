@@ -9,7 +9,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
-      - run: npm ci -g @angular/cli@17.0.5
+      - run: npm install -g @angular/cli@17.0.5
       - run: npm ci
       - run: npm run build
       
